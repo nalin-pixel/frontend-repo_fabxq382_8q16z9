@@ -1,71 +1,32 @@
+import { Link } from 'react-router-dom'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-gradient-to-br from-rose-900 via-slate-900 to-black text-white">
+      <header className="flex items-center justify-between px-6 py-4">
+        <Link to="/" className="font-bold tracking-tight">Eternal Flame</Link>
+        <nav className="flex items-center gap-4 text-sm">
+          <Link to="/create" className="hover:underline">Create</Link>
+          <Link to="/gallery" className="hover:underline">Gallery</Link>
+          <Link to="/test" className="hover:underline">Check Backend</Link>
+        </nav>
+      </header>
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
+      <div className="relative min-h-[70vh] flex items-center justify-center p-8">
+        <div className="max-w-3xl w-full text-center">
+          <h1 className="text-5xl font-extrabold tracking-tight mb-4">Eternal Flame</h1>
+          <p className="text-white/80 mb-8">Create a forever-burning love-letter page with glowing flame, photos, music, and a secure checkout.</p>
 
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+          <div className="flex items-center justify-center gap-3">
+            <Link to="/create" className="px-5 py-3 rounded bg-rose-500 hover:bg-rose-600">Create Your Flame</Link>
+            <Link to="/gallery" className="px-5 py-3 rounded bg-white/10 hover:bg-white/20">Explore Gallery</Link>
           </div>
         </div>
       </div>
+
+      <footer className="px-6 py-6 text-center text-xs text-white/60">
+        © 2025 Eternal Flame. All rights reserved.
+      </footer>
     </div>
   )
 }
